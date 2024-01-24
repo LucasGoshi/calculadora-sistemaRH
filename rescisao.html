@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescisão</title>
+    <link rel="icon" type="image/x-icon" 
+    href = "https://cdn-icons-png.flaticon.com/256/46/46912.png">
+    <link rel = "stylesheet" href="rescisao.css">
+</head>
+<body>
+    <div class="barra1">
+        <h1>Calculadora de Rescisão</h1>
+    </div>
+
+    <form>
+        <label for="salarioBruto">Salário Bruto: </label>
+            <input type="text" id="salarioBruto" step="0.01"/> <br><br>
+        <label for="contratacao">Data de Contratação:</label>
+            <input type="date" id="contratacao"><br><br>
+        <label for="demissao" class="cssDemissao-label">Data de Demissão:</label>
+            <input type="date" id="demissao" class="cssDemissao-input"><br><br>
+        <div class="checkbox-container">
+                <input type="checkbox" id="feriasVencidas" name="opcional[]" value="feriasVencidas" class="css-checkbox-input">
+                <label for="feriasVencidas" class="css-checkbox">Possui Férias Vencidas ?</label> 
+            </div>
+        <label for="motivo" class="css-motivo">Motivo: </label>
+            <select id="motivo" class="css-motivo-select">
+                <option value="">------</option>
+                <option value="acordoComum">Demissão de comum acordo</option>
+                <option value="semJC">Demissão sem justa causa</option>
+                <option value="comJC">Demissão com justa causa</option>
+                <option value="pedidoD">Pedido de Demissão</option>
+            </select> <br><br>
+            <button type="button" class="css-botao" onclick="calcularRescisao()">Calcular</button>
+    </form>
+    <div class="tabelas-container">
+'    <table class="tabelaResultados" style="display: none;">
+        <tr>
+            <th>Evento</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>Saldo Salário</td>
+            <td id="mostraSaldoFerias">R$ 0.00</td>
+        </tr>
+        <tr>
+            <td>Férias Vencidas</td>
+            <td id="mostraFeriasVen">R$ 0.00</td>
+        </tr>
+        <tr>
+            <td>Férias Proporcionais</td>
+            <td id="mostraFeriasPropor">R$ 0.00</td>
+        </tr>
+        <tr>
+            <td>13º Terceiro</td>
+            <td id="mostraDecimoTer">R$ 0.00</td>
+        </tr>
+        <tr>
+            <td>Aviso Prévio</td>
+            <td id="mostraAvisoPrevio">R$ 0.00</td>
+        </tr>
+        <tr>
+            <td>Multa FGTS</td>
+            <td id="mostraFGTS">R$ 0.00</td>
+        </tr>
+        </tr>
+        <tr>
+            <td>Total de Rescisão</td>
+            <td id="mostraCalculoRescisao">R$ 0.00</td>
+        </tr>
+    </table>
+        <table class="tabelaNumDatas" style="display: none;">
+            <tr>
+                <th>Datas</th>
+                <th>Número Inteiro de Datas</th>
+            </tr>
+            <tr>
+                <td>Anos</td>
+                <td id="mostraAno">0</td>
+            </tr>
+            <tr>
+                <td>Meses</td>
+                <td id="mostraMes">0</td>
+            </tr>
+            <tr>
+                <td>Dias</td>
+                <td id="mostraDia">0</td>
+            </tr>
+    </div>
+</body>
+    <script src="main.js"></script>
+</html>

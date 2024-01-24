@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" 
+    href = "https://cdn-icons-png.flaticon.com/256/46/46912.png">
+    <link rel = "stylesheet" href="salarioLiquido.css">
+
+    <title>Calculadora de Salário Líquido</title>
+</head>
+<body>
+    
+    <div class="barra1">
+        <h1>Calculadora de Salário Líquido</h1>
+    </div>
+
+   <form>
+        <label for="salarioBruto">Salário Bruto:</label>
+            <input type="text" id="salarioBruto" step="0.01" placeholder="R$ XXXXX,XX"/> <br><br>
+        <label for="descontos">Outros descontos: </label>
+            <input type="text" id="descontos" step="0.01" placeholder="R$ XXXX,XX"> 
+            <button type="button" id ="submit" onclick="calcularSalarioLiquido()">Calcular</button> 
+    </form> 
+    <table class="tabelaResultados" style="display: none;">
+            <tr>
+                <th>Evento</th>
+                <th>Alíquota Real</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>Salário Bruto</td>
+                <td>0%</td>
+                <td id="mostraSalarioBruto">R$ 0.00</td>
+            </tr>
+            <tr>
+                <td>Desconto INSS</td>
+                <td id="mostraARinss"></td>
+                <td id="mostraDescontoINSS">R$ 0.00</td>
+            </tr>
+            <tr>
+                <td>Desconto IRRF</td>
+                <td id="mostraARirrf"></td>
+                <td id="mostraDescontoIRRF">R$ 0.00</td>
+            </tr>
+            <tr>
+                <td>Outros Descontos</td>
+                <td>0%</td>
+                <td id="mostraDescontos">R$ 0.00</td>
+            </tr>
+            </tr>
+            <tr>
+                <td>Salário Líquido</td>
+                <td>0%</td>
+                <td id="mostraSalarioLiquido">R$ 0.00</td>
+            </tr>
+    </table>
+    
+</body>
+    <script src="main.js"></script>
+</html>

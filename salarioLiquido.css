@@ -1,0 +1,60 @@
+body {
+    background-color: rgba(128, 115, 0, 0.562);
+    margin: 0;
+    padding: 0;
+}
+
+.barra1 {
+    height: 100px;
+    background-color: #5c8f4dcc;
+}
+
+h1{
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    margin: 0;   
+    text-align: center;
+    padding-top: 10px;
+}
+
+label{
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+form {
+    background-color: rgba(46, 111, 197, 0.651);
+    border: 2px solid rgb(9, 20, 179);
+    border-radius: 6px;
+    width: 500px;
+    height: 150px;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+.tabelaResultados{
+    background-color: rgba(21, 90, 180, 0.637);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 6px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    width: 500px;
+    position: relative;
+    margin: 1px auto;
+}
+
+.tabelaResultados tr:nth-child(even) {
+    background-color: rgba(16, 85, 141, 0.651); 
+}
+
+.tabelaResultados tr:nth-child(odd) {
+    background-color: rgba(182, 142, 142, 0.2); 
+}
+
+
+
+
